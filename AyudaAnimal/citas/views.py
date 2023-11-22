@@ -9,7 +9,7 @@ def vista_formulario_cita(request):
         form = formulario_cita_medico(request.POST)
         if form.is_valid():
             cita = form.save()
-            messages.success(request, f"Cita agendada con éxito: {cita.Paciente} con {cita.medico} el {cita.dia} de {cita.get_horario_display()}")
+            messages.success(request, f"Cita agendada con éxito: {cita.paciente} con {cita.medico} el {cita.dia} de {cita.get_horario_display()}")
             return redirect('Mensaje_registro')
 
     else:

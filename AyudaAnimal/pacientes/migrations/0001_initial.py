@@ -15,7 +15,12 @@ class Migration(migrations.Migration):
             name='pacientes',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('nombre', models.CharField(default='jorge', max_length=200)),
+                ('nombre_mascota', models.CharField(max_length=20)),
+                ('especie_mascota', models.CharField(max_length=20)),
+                ('raza_mascota', models.CharField(max_length=20)),
+                ('edad_mascota', models.IntegerField()),
+                ('nombre_dueno', models.CharField(max_length=20)),
+                ('rut_dueno', models.TextField(max_length=20)),
             ],
         ),
     ]
